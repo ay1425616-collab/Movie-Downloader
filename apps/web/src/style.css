@@ -1,0 +1,40 @@
+@import "tailwindcss";
+body {
+  background: #10151f;
+  color: #edf3fa;
+  font-family: system-ui;
+  margin: 0;
+}
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  background: #202a3a;
+  border: 1px solid #53627b;
+  border-radius: 8px;
+  color: white;
+}
+button {
+  background: #52e0b0;
+  color: #10151f;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 8px 8px 8px 0;
+  cursor: pointer;
+}
+fieldset {
+  border: 1px solid #53627b;
+  padding: 16px;
+  margin: 20px 0;
+}
+a {
+  color: #52e0b0;
+}

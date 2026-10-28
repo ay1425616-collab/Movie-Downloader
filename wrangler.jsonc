@@ -1,0 +1,27 @@
+{
+  "name": "cinewave-downloads",
+  "main": "apps/worker/src/index.tsx",
+  "compatibility_date": "2026-10-28",
+  "assets": {
+    "directory": "apps/web/dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cinewave",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations/schema",
+    },
+  ],
+  "vars": {
+    "SITE_NAME": "CineWave Downloads",
+    "ALLOWED_DOWNLOAD_HOSTS": "",
+    "BOOTSTRAP_ENABLED": "false",
+  },
+  "triggers": {
+    "crons": ["0 3 * * *"],
+  },
+}

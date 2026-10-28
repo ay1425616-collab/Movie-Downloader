@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+apps/web/dist/
+.dev.vars
+.env
+playwright-report/
+test-results/
+*.zip
+*.download

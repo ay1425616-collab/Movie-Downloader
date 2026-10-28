@@ -1,0 +1,31 @@
+{
+  "name": "cinewave",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @cinewave/worker",
+    "build": "npm run build -w @cinewave/web",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "db:migrate": "wrangler d1 migrations apply cinewave --local",
+    "db:seed": "wrangler d1 execute cinewave --local --file migrations/seed.sql",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261028.1",
+    "@playwright/test": "^1.56.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.2.0",
+    "wrangler": "^4.0.0"
+  }
+}
